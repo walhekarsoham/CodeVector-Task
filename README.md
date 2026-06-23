@@ -474,4 +474,5 @@ Returning COUNT(*) for has_more	Full table scan on every request
 Not handling malformed cursor	Returns HTTP 500, crashes the server
 Cursor with mutable sort field	Any update to that field breaks pagination
 Your solution avoids every one of these.-->#   C o d e V e c t o r - T a s k  
+ #   C o d e V e c t o r - T a s k  
  

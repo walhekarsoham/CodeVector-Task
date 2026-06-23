@@ -1,0 +1,21 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# requirements.txt — pinned runtime dependencies
+#
+# WHY PINNED (==) VERSIONS?
+#   Open ranges (>=, ~=) mean a fresh `pip install` six months from now can
+#   pull in a breaking minor release and silently break the app. Pinning
+#   exact versions makes builds reproducible.
+#
+# fastapi         — the ASGI web framework (not used yet, here for completeness)
+# uvicorn         — ASGI server to run FastAPI
+# psycopg2-binary — PostgreSQL adapter; the "-binary" variant bundles the C
+#                   library so no system libpq-dev / pg_config is required.
+#                   Switch to plain psycopg2 in production Docker images where
+#                   you control the build environment, for a smaller footprint.
+# python-dotenv   — loads .env into os.environ at startup
+# ─────────────────────────────────────────────────────────────────────────────
+
+fastapi==0.115.6
+uvicorn==0.32.1
+psycopg2-binary==2.9.10
+python-dotenv==1.0.1
